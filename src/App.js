@@ -4,6 +4,10 @@ import './App.css'
 class App extends Component {
   state = {display: 'Hello there!'}
 
+  displayKeyPad (elem) {
+    this.setState({display: elem.id})
+  }
+
   render() {
     return (
       <div id="drum-machine">
