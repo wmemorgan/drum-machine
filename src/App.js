@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import './App.css'
 
 class App extends Component {
-  state = {display: 'Hello there!'}
+  constructor() {
+    super()
+    this.state = { display: 'Hello there!' }
+    this.displayKeyPad = this.displayKeyPad.bind(this)
+  }
+  
 
-  displayKeyPad (elem) {
-    this.setState({display: elem.id})
+  displayKeyPad () {
+    this.setState({display: "You're awesome!"})
   }
 
   render() {
@@ -14,7 +19,7 @@ class App extends Component {
         <table className="table key-pad">
           <tbody>
             <tr>
-              <td className="drum-pad" id="heater-1"><audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Q"></audio>Q</td>
+              <td className="drum-pad" id="heater-1" onClick={this.displayKeyPad}><audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Q"></audio>Q</td>
               <td className="drum-pad" id="heater-2"><audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" className="clip" id="W"></audio>W</td>
               <td className="drum-pad" id="heater-3"><audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" className="clip" id="E"></audio>E</td>
             </tr>
