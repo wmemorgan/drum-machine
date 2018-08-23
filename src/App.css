@@ -1,28 +1,44 @@
-.App {
+/*-----CSS Variables----*/
+/*--Basic color scheme--*/
+:root {
+  --dark-primary-color: #022140;
+  --default-primary-color: #265077;
+  --light-primary-color: #C5CAE9;
+  --text-primary-color: #FFFFFF;
+  --accent-color: #51a7f8;
+  --primary-bg-color: #FFFFFF;
+  --primary-text-color: #595959;
+  --emphasis-text-color: #212121;
+  --secondary-text-color: #1E4258;
+  --divider-color: var(--dark-primary-color);
+  --overlay-bg-color: #1E4258;
+  --overlay-text-color: #ccc;
+  --container-bg-color: #FCFCFC;
+}
+
+#drum-machine {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 991px;
+  margin: 5rem auto;
+  background: var(--light-primary-color);
+  border: 2px solid var(--dark-primary-color);
+}
+
+.table {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.drum-pad {
   text-align: center;
+  border: 1px solid black;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#display {
+  margin: 1rem;
+  background: var(--accent-color);
 }
