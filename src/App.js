@@ -10,7 +10,15 @@ class App extends Component {
   
 
   displayKeyPad (e) {
+    e.preventDefault()
     this.setState({display: e.target.id})
+  }
+
+  componentDidMount() {
+    let keypad = document.getElementsByClassName('drum-pad')
+    for (let i = 0; i < keypad.length; i++) {
+      keypad[i].addEventListener('click', this.displayKeyPad)
+    }
   }
 
   render() {
