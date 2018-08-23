@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css'
 
 class App extends Component {
+  state = {display: 'Hello there!'}
+
   render() {
     return (
       <div id="drum-machine">
@@ -26,6 +28,7 @@ class App extends Component {
 
         </table>
         <div id="display">
+          {this.state.display}
         </div>
 
       </div>
