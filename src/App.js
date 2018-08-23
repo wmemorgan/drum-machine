@@ -9,8 +9,8 @@ class App extends Component {
   }
   
 
-  displayKeyPad () {
-    this.setState({display: "You're awesome!"})
+  displayKeyPad (e) {
+    this.setState({display: e.target.id})
   }
 
   render() {
