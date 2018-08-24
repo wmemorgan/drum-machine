@@ -6,12 +6,18 @@ class App extends Component {
     super()
     this.state = { display: 'Hello there!' }
     this.displayKeyPad = this.displayKeyPad.bind(this)
+    this.playSound = this.playSound.bind(this)
   }
   
+  playSound (url) {
+    let audio = new Audio(url);
+    audio.play();
+  }
 
   displayKeyPad (e) {
     e.preventDefault()
     this.setState({display: e.target.id})
+    this.playSound(document.getElementById(e.target.innerText).src)
   }
 
   componentDidMount() {
